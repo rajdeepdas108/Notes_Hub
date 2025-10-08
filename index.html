@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes Hub</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="app-header">
+            <div class="app-header__content">
+                <div class="app-header__titles">
+                    <p class="eyebrow">Organize smarter</p>
+                    <h1>Notes Hub</h1>
+                    <p class="subtitle">Access, review, and upload your study materials from a single, beautifully organized place.</p>
+                </div>
+                <div class="app-header__actions">
+                    <button id="theme-toggle" class="button button--ghost" type="button" aria-label="Toggle theme">
+                        <svg class="button__icon button__icon--theme" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M12 3.5a1 1 0 0 1 1 1v1.13a1 1 0 1 1-2 0V4.5a1 1 0 0 1 1-1Zm6.5 8.5a1 1 0 0 1 0-2h1.13a1 1 0 1 1 0 2H18.5ZM12 17.37a1 1 0 0 1 1 1V19.5a1 1 0 1 1-2 0v-1.13a1 1 0 0 1 1-1Zm-7.63-5.37a1 1 0 0 1 0-2H5.5a1 1 0 1 1 0 2H4.37ZM6.94 6.94a1 1 0 0 1 1.41-1.41l.8.8a1 1 0 0 1-1.42 1.42Zm8.91-.61.8-.8a1 1 0 1 1 1.42 1.41l-.8.8a1 1 0 1 1-1.42-1.41Zm1.42 10.74a1 1 0 0 1-1.42-1.42l.8-.8a1 1 0 0 1 1.42 1.42Zm-9.71-1.42-0.8.8a1 1 0 1 1-1.41-1.42l.8-.8a1 1 0 1 1 1.41 1.42ZM12 7a5 5 0 1 1 0 10A5 5 0 0 1 12 7Z" />
+                        </svg>
+                        <span class="button__label button__label--compact">Day / Night</span>
+                    </button>
+                    <button id="upload-note-button" class="button button--primary" type="button">
+                        <span class="button__label">Upload New Note</span>
+                        <svg class="button__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M12 3a1 1 0 0 1 1 1v7h3.5a1 1 0 1 1 0 2H13v7a1 1 0 1 1-2 0v-7H7.5a1 1 0 0 1 0-2H11V4a1 1 0 0 1 1-1Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <main class="app-main">
+            <section class="notes-board" aria-labelledby="notes-heading">
+                <div class="notes-board__header">
+                    <div class="notes-board__intro">
+                        <h2 id="notes-heading">Available Notes</h2>
+                        <p class="notes-board__subtitle">Latest uploads appear first. Hover a card to preview details.</p>
+                    </div>
+                    <label class="notes-search" for="note-search">
+                        <svg class="notes-search__icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                            <path d="M15.5 14h-.79l-.28-.27a6 6 0 1 0-.71.71l.27.28v.79l5 5a1 1 0 0 0 1.41-1.41l-5-5Zm-5 0a4 4 0 1 1 0-8 4 4 0 0 1 0 8Z" />
+                        </svg>
+                        <input id="note-search" type="search" name="search" autocomplete="off" placeholder="Search notes" aria-label="Search notes" />
+                    </label>
+                </div>
+                <div id="notes-container" class="notes-grid" aria-live="polite">
+                    <p id="loading-message" class="notes-message notes-message--info">Loading notes...</p>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
