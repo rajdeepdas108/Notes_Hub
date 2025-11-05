@@ -5,7 +5,7 @@ window.MY_NOTES_CONFIG = {
      * Google API key with the Drive API enabled. Make sure the key is either unrestricted
      * or that the domain you serve this page from is added to the allowed referrers list.
      */
-    apiKey: 'AIzaSyDKDttASXzfYrU1B6IWUK0q77LGkY1OL1o',
+    apiKey: 'AIzaSyAmu9B-NEHRn_55EL69VtZfXEP2m5QZt_0',
 
     /**
      * The ID of the Google Drive folder that contains your notes. Share the folder publicly
@@ -43,3 +43,4 @@ window.MY_NOTES_CONFIG = {
         }
     ]
 };
+
